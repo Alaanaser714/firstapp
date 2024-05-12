@@ -88,7 +88,7 @@ class MyTranslation extends Translations {
           "32": "Success",
           "33": "save",
           "34": "Please Enter new Password",
-          
+          "35": "New Password",
           "36": "Password has been reset successfully",
           "37": "congratulations",
           "38": "successfully registered",
