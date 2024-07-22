@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_firstapplication/core/constant/routes.dart';
+import 'package:flutter_firstapplication/core/services/services.dart';
 import 'package:flutter_firstapplication/date/datesource/static/static.dart';
 import 'package:get/get.dart';
 
@@ -14,12 +15,14 @@ class OnBoardingControllerImp extends OnBoardingController {
   late PageController pageController;
 
   int currentPage = 0;
+   MyServices myServices = Get.find() ; 
 
   @override
   next() {
     currentPage++;
 
     if (currentPage > onBoardingList.length - 1) {
+      myServices.sharedPreferences.setString("step", "1") ; 
        Get.offAllNamed(AppRoute.login) ; 
     } else {
       pageController.animateToPage(currentPage,

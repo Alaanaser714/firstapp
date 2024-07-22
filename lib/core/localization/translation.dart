@@ -47,7 +47,8 @@ class MyTranslation extends Translations {
           "39":'رمز التحقق',
           "40":"التحقق من الشفرة",
           "41":"الرجاء إدخال الرمز الرقمي المرسل إليك",
-          "42":"إعادة تعيين كلمة المرور"
+          "42":"إعادة تعيين كلمة المرور",
+          "43":"أعد إدخال كلمة المرور"
         },
         "en": {
           "1": "Choose Language",
@@ -95,7 +96,8 @@ class MyTranslation extends Translations {
           "39": "Verification Code",
           "40" :"Check code",
           "41" :"Please Enter The Digit Code Sent To You",
-          "42":"ResetPassword"
+          "42":"ResetPassword",
+          "43":"Re-enter Your Password",
         }
       };
 }

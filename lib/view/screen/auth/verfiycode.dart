@@ -2,7 +2,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_firstapplication/controller/auth/verfiycode_controller.dart';
+import 'package:flutter_firstapplication/controller/forgetpassword/verfiycode_controller.dart';
 import 'package:flutter_firstapplication/core/constant/color.dart';
 import 'package:flutter_firstapplication/view/widget/auth/customtextbod.dart';
 import 'package:flutter_firstapplication/view/widget/auth/customtexttitle.dart';
@@ -24,7 +24,7 @@ class VerfiyCode extends StatelessWidget {
         title: Text("39".tr,
             style: Theme.of(context)
                 .textTheme
-                .headline1!
+                .displayLarge!
                 .copyWith(color: AppColor.grey)),
       ),
       body: Container(
@@ -51,7 +51,7 @@ class VerfiyCode extends StatelessWidget {
                 },
                 //runs when every textfield is filled
                 onSubmit: (String verificationCode) {
-                     controller.goToResetPassword() ; 
+                     controller.goToResetPassword(verificationCode) ; 
                 }, // end onSubmit
               ), 
           const SizedBox(height: 40),
