@@ -1,18 +1,14 @@
+
 import 'package:flutter_firstapplication/core/class/crud.dart';
 import 'package:flutter_firstapplication/linkApi.dart';
 
 class VerifyCodeForgetPasswordData {
   Crud crud;
-
   VerifyCodeForgetPasswordData(this.crud);
-
-  postdata(
-    String verfiycode,
-    String email,
-  ) async {
+  postdata(String email ,String verifycode) async {
     var response = await crud.postData(AppLink.verifycodeforgetpassword, {
-      "verfiycode": verfiycode,
-      "email": email,
+      "email" : email , 
+      "verifycode" : verifycode   
     });
     return response.fold((l) => l, (r) => r);
   }

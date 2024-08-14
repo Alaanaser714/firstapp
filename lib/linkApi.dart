@@ -21,9 +21,10 @@ static const String resend  = "$server/auth/resend.php";
 
 
 // ForgetPassword
-static const String checkemail = "$server/forgetpassword/checkemail.php";
-static const String verifycodeforgetpassword = "$server/forgetpassword/verifycode.php";
-static const String resetpassword = "$server/forgetpassword/resetpassword.php";
+  static const String checkEmail = "$server/forgetpassword/checkemail.php";
+  static const String resetPassword =  "$server/forgetpassword/resetpassword.php";
+  static const String verifycodeforgetpassword ="$server/forgetpassword/verifycode.php";
+      
 
 // Home 
 

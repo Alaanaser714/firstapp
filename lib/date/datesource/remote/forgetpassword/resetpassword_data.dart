@@ -1,18 +1,15 @@
+
+
 import 'package:flutter_firstapplication/core/class/crud.dart';
 import 'package:flutter_firstapplication/linkApi.dart';
 
 class ResetPasswordData {
   Crud crud;
-
   ResetPasswordData(this.crud);
-
-  postdata(
-    String password,
-    String email,
-  ) async {
-    var response = await crud.postData(AppLink.resetpassword, {
-      "password": password,
-      "email": email,
+  postdata(String email ,String password) async {
+    var response = await crud.postData(AppLink.resetPassword, {
+      "email" : email , 
+      "password" : password   
     });
     return response.fold((l) => l, (r) => r);
   }

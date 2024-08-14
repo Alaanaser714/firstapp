@@ -1,4 +1,3 @@
-// ignore_for_file: unnecessary_new, prefer_collection_literals, unnecessary_this
 
 class CategoriesModel {
   String? categoriesId;

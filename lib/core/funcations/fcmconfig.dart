@@ -1,47 +1,47 @@
-// ignore_for_file: unused_local_variable, avoid_print
+// // ignore_for_file: unused_local_variable, avoid_print
 
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter_firstapplication/controller/orders/pending_controller.dart';
-import 'package:get/get.dart';
-import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:flutter_firstapplication/controller/orders/pending_controller.dart';
+// import 'package:get/get.dart';
+// import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
 
-requestPermissionNotification() async {
-  NotificationSettings settings =
-      await FirebaseMessaging.instance.requestPermission(
-    alert: true,
-    announcement: false,
-    badge: true,
-    carPlay: false,
-    criticalAlert: false,
-    provisional: false,
-    sound: true,
-  );
-}
+// requestPermissionNotification() async {
+//   NotificationSettings settings =
+//       await FirebaseMessaging.instance.requestPermission(
+//     alert: true,
+//     announcement: false,
+//     badge: true,
+//     carPlay: false,
+//     criticalAlert: false,
+//     provisional: false,
+//     sound: true,
+//   );
+// }
 
-fcmconfig() {
-  print("hai =======================================================");
-  FirebaseMessaging.onMessage.listen((message) {
-    print("================== Notification =================");
-    print(message.notification!.title);
-    print(message.notification!.body);
-    FlutterRingtonePlayer().playNotification();
-    Get.snackbar(message.notification!.title!, message.notification!.body!);
-    refreshPageNotification(message.data);
-  });
-}
+// fcmconfig() {
+//   print("hai =======================================================");
+//   FirebaseMessaging.onMessage.listen((message) {
+//     print("================== Notification =================");
+//     print(message.notification!.title);
+//     print(message.notification!.body);
+//     FlutterRingtonePlayer().playNotification();
+//     Get.snackbar(message.notification!.title!, message.notification!.body!);
+//     refreshPageNotification(message.data);
+//   });
+// }
 
-refreshPageNotification(data) {
-  print("============================= page id ");
-  print(data['pageid']);
-  print("============================= page name ");
-  print(data['pagename']);
-  print("================== Current Route");
-  print(Get.currentRoute);
+// refreshPageNotification(data) {
+//   print("============================= page id ");
+//   print(data['pageid']);
+//   print("============================= page name ");
+//   print(data['pagename']);
+//   print("================== Current Route");
+//   print(Get.currentRoute);
 
-  if (Get.currentRoute == "/orderspending" &&
-      data['pagename'] == "refreshorderpending") {
-    OrdersPendingController controller = Get.find();
-    controller.refrehOrder();
-  }
-}
+//   if (Get.currentRoute == "/orderspending" &&
+//       data['pagename'] == "refreshorderpending") {
+//     OrdersPendingController controller = Get.find();
+//     controller.refrehOrder();
+//   }
+// }
 
